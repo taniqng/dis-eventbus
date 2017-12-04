@@ -12,4 +12,4 @@ Simple distribute event bus implemented by RabbitMQ
 ## 环境
 
 - Maven 3
-- Java 8 (the project produces Java 6 compatible bytecode but partially integrates with Java 8)
+- Java 8
