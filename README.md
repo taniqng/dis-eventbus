@@ -1,5 +1,5 @@
 # dis-eventbus
-Simple distribute event bus implemented by RabbitMQ
+Simple distribute eventbus implemented by RabbitMQ
 
 ## 目标：
 * 实现一个分布式事件总线。
