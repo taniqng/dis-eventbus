@@ -13,3 +13,30 @@ Simple distribute event bus implemented by RabbitMQ
 
 - Maven 3
 - Java 8
+
+## 基于注解的事件发布
+
+```
+	/**
+	 * 定义事件对象
+	 */
+	public class SendPostEvent extends DisEvent<PostInfo>{
+
+		private static final long serialVersionUID = -138646642993478976L;
+
+	}
+
+```
+
+```
+	/**
+	 * 保存文章
+	 */
+	@RequestMapping(value = "/posts", method = RequestMethod.POST)
+	@SendEvent(SendPostEvent.class)
+	public PostInfo savePost(@Valid @NotNull @RequestBody PostInfo post) {
+		//你的业务代码
+		//返回文章对象, 该对象作为事件发布的data, 可以被事件监听者接收。
+	}
+
+```
