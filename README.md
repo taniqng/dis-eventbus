@@ -40,3 +40,4 @@ Simple distribute event bus implemented by RabbitMQ
 	}
 
 ```
+
