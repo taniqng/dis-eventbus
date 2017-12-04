@@ -9,4 +9,7 @@ Simple distribute event bus implemented by RabbitMQ
 ## 使用建议：
 * 软件合理分层建模，使事件沿着单一层面传播。避免逆向甚至网状传播。
 
+## 环境
 
+- Maven 3
+- Java 8 (the project produces Java 6 compatible bytecode but partially integrates with Java 8)
