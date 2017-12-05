@@ -46,8 +46,8 @@ Simple distribute eventbus implemented by RabbitMQ
 
 ```
 /**
- * 监听PostInfo的变化，同步更新Elasticsearch。
- * 这里可以考虑使用缓冲队列，然后bulk操作来批量处理，后期优化。
+ * 监听PostInfo的变化，同步更新Elasticsearch。<br>
+ * 这里可以考虑使用缓冲队列，然后bulk操作来批量处理，后期优化。<br>
  * 
  * <p>
  *  注：对单机而言这个操作于主业务来说是异步的。对分布式环境更是会选择最空闲的节点来执行。<br>
@@ -76,6 +76,8 @@ public class PostInfoListener {
 }
 
 ```
+## 遗留问题
+* 依赖RabbitMQ的调度和消息机制，这里考虑将其抽象成SPI, 使依赖反转，可由使用方扩展。
 
 
 ## License
