@@ -1,6 +1,6 @@
 # dis-eventbus
 Simple distribute eventbus implemented by RabbitMQ
-- 基于：
+based on：
 * spring
 * rabbitMQ
 * google guava
