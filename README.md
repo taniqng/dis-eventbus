@@ -1,5 +1,5 @@
 # dis-eventbus
-Simple distribute eventbus implemented by RabbitMQ
+Simple distribute eventbus 
 based on：
 * spring
 * rabbitMQ
