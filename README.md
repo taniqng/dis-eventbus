@@ -1,5 +1,6 @@
 # dis-eventbus
 Simple distribute eventbus implemented by RabbitMQ
+- 
 
 ## 目标：
 * 实现一个分布式事件总线。
@@ -40,6 +41,42 @@ Simple distribute eventbus implemented by RabbitMQ
 	}
 
 ```
+
+## 事件监听器
+
+```
+/**
+ * 监听PostInfo的变化，同步更新Elasticsearch。
+ * 这里可以考虑使用缓冲队列，然后bulk操作来批量处理，后期优化。
+ * 
+ * <p>
+ *  注：对单机而言这个操作于主业务来说是异步的。对分布式环境更是会选择最空闲的节点来执行。<br>
+ *      所以注意使用合适的锁来保证对共享资源操作时的同步。
+ * </p>
+ */
+@MessageListener
+public class PostInfoListener {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	SearchService postService;
+	
+	@Subscribe	
+	public void accept(SendPostEvent event){
+	  PostInfo postInfo = event.getData();	  
+	  //将postInfo保存至ES
+	}
+	
+	@Subscribe
+	public void accept(EditPostEvent event){
+	  PostInfo postInfo = event.getData();	  
+	  //更新ES指定的document
+	}
+}
+
+```
+
 
 ## License
 dis-eventbus is Open Source software released under the
