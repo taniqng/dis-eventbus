@@ -1,6 +1,9 @@
 # dis-eventbus
 Simple distribute eventbus implemented by RabbitMQ
-- 
+- 基于：
+* spring
+* rabbitMQ
+* google guava
 
 ## 目标：
 * 实现一个分布式事件总线。
