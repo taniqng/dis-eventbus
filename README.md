@@ -79,9 +79,9 @@ public class PostInfoListener {
 }
 
 ```
-## 遗留问题
-* 将考虑抽象成SPI，使其脱离MQ机制, 使依赖反转（使dis-eventbus本身不依赖于MQ机制, 相反MQ仅作为dis-eventbus的一个默认的provider）。
-
+## Q & A
+> Q: 项目中使用activeMQ如何操作？<br>
+> A: dis-eventbus使用spring-boot-starter-amqp, 默认使用rabbitMQ作为Spring AMQP规范（SPI）的provider，只需execlude掉spring-rabbit，实现自己的amqp provider。
 
 ## License
 dis-eventbus is Open Source software released under the
