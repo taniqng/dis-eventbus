@@ -80,7 +80,7 @@ public class PostInfoListener {
 
 ```
 ## 遗留问题
-* 依赖RabbitMQ的调度和消息机制，这里考虑将其抽象成SPI, 使依赖反转，可由使用方扩展。
+* 将考虑抽象成SPI，使其脱离MQ机制, 使依赖反转（使dis-eventbus本身不依赖于MQ机制, 相反MQ仅作为dis-eventbus的一个默认的provider）。
 
 
 ## License
