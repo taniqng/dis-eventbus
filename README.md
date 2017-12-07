@@ -81,7 +81,7 @@ public class PostInfoListener {
 ```
 ## Q & A
 > Q: 项目中使用activeMQ如何操作？<br>
-> A: dis-eventbus使用spring-boot-starter-amqp, 默认使用rabbitMQ作为Spring AMQP规范的provider，只需execlude掉spring-rabbit，实现自己的amqp provider。
+> A: dis-eventbus使用spring-boot-starter-amqp, 默认使用rabbitMQ作为Spring AMQP规范（SPI）的provider，只需execlude掉spring-rabbit，实现自己的amqp provider。
 
 ## License
 dis-eventbus is Open Source software released under the
