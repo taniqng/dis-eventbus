@@ -50,8 +50,6 @@ import com.github.taniqng.eventbus.EventCode;
 import com.github.taniqng.eventbus.EventHandler;
 import com.github.taniqng.eventbus.helper.MQResourceRegistry;
 
-
-
 /**
  * <p>
  *  注册EventListener

@@ -31,9 +31,6 @@ public class EventAspect {
     @Pointcut("@annotation(org.magicframework.eventbus.SendEvent)")
     public void eventPointcut() {}
     
-    
-
-
     @Around("eventPointcut()")
     public Object doArround(ProceedingJoinPoint joinPoint) throws Throwable {
     	Object obj = joinPoint.proceed();
@@ -45,6 +42,5 @@ public class EventAspect {
     	}
     	return obj;
     }
-
 
 }

@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -20,7 +20,7 @@ public class DisEventBus {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Autowired RabbitTemplate rabbitTemplate;
+	@Autowired AmqpTemplate rabbitTemplate;
 	
 	@SuppressWarnings("unchecked")
 	protected <T> void publishEvent(Class<? extends DisEvent<T>> eventClass, Object event){
