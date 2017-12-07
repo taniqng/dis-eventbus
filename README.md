@@ -1,7 +1,7 @@
 # dis-eventbus
 Simple distribute eventbus 
 based on：
-* spring
+* spring boot
 * rabbitMQ
 * google guava
 
