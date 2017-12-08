@@ -34,12 +34,11 @@ based on：
 			<version>1.0.0</version>
 		</dependency>
 ```
-
-## 基于注解的事件发布
+## 定义你的事件
 
 ```
 	/**
-	 * 定义事件对象
+	 * 定义一个发表文章事件
 	 */
 	public class SendPostEvent extends DisEvent<PostInfo>{
 
@@ -49,11 +48,12 @@ based on：
 
 ```
 
+## 基于注解的事件发布
+
 ```
 	/**
 	 * 保存文章
-	 */
-	
+	 */	
 	@RequestMapping(value = "/posts", method = RequestMethod.POST)
 	@SendEvent(SendPostEvent.class)
 	public PostInfo savePost(@Valid @NotNull @RequestBody PostInfo post) {
