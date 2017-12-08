@@ -18,6 +18,23 @@ based on：
 - Maven 3
 - Java 8
 
+## maven依赖
+
+```
+		
+		<dependency>
+			<groupId>com.github.taniqng</groupId>
+			<artifactId>dis-eventbus-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.taniqng</groupId>
+			<artifactId>dis-eventbus-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+```
+
 ## 基于注解的事件发布
 
 ```
