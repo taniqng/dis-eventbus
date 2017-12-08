@@ -53,6 +53,7 @@ based on：
 	/**
 	 * 保存文章
 	 */
+	
 	@RequestMapping(value = "/posts", method = RequestMethod.POST)
 	@SendEvent(SendPostEvent.class)
 	public PostInfo savePost(@Valid @NotNull @RequestBody PostInfo post) {
@@ -61,6 +62,20 @@ based on：
 	}
 
 ```
+
+## 手动发布(下面代码和上面等价,但尽量避免手动发布，合理布局代码基本上可以避免手工发布)
+
+```
+	@Autowired DisEventBus bus;
+	
+	@RequestMapping(value = "/posts", method = RequestMethod.POST)
+	public PostInfo savePost(@Valid @NotNull @RequestBody PostInfo post) {
+		//你的业务代码
+		bus.publishEvent(SendPostEvent.class, post);
+	}
+
+```
+
 
 ## 事件监听器
 
