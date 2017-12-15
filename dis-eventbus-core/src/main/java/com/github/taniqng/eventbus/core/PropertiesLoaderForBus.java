@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 托管给spring的properties属性读取工具
- * @Author tianyou.yang
- * @date 2016年11月24日 下午1:40:05
- *
  */
 @Component
 public class PropertiesLoaderForBus implements BeanFactoryPostProcessor {
@@ -75,7 +72,6 @@ public class PropertiesLoaderForBus implements BeanFactoryPostProcessor {
    * 获取指定的Integer
    * @param key
    * @return
-   * @exception  NumberFormatException 如果不能正确转换数字
    */
   private Integer _getInteger(String key){
     if(key == null) return null;

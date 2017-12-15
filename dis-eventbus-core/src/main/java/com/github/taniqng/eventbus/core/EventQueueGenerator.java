@@ -4,9 +4,6 @@ import org.springframework.util.StringUtils;
 
 public class EventQueueGenerator {
 
-	/**
-	 * @return
-	 */
 	public static String gen(String eventCode) {
 		String appName = PropertiesLoaderForBus
 				.getProperty("spring.application.name");

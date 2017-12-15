@@ -34,8 +34,6 @@ public class DisEventBus {
 	
 	/**
 	 * 发布异常事件
-	 * @param eventClass 事件类
-	 * @param event 事件携带的数据
 	 */
 	public <T> void publish(Class<? extends DisEvent<T>> eventClass, T event){
 		try {

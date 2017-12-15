@@ -13,16 +13,6 @@ import java.lang.reflect.Type;
  */
 public class EntityUtils {
 
-	/**
-	 * 
-	 * @Title: getSuperClassGenricType
-	 * @Description: 获取类的泛型参数类型
-	 * @param clazz
-	 *            类
-	 * @param index
-	 *            泛型参数index
-	 * @return Class<?>
-	 */
 	public static Class<?> getSuperClassGenricType(final Class<?> clazz,
 			final int index) {
 		Type genType = clazz.getGenericSuperclass();
@@ -77,14 +67,6 @@ public class EntityUtils {
 		return (Class<?>) params[index];
 	}
 
-	/**
-	 * 获取指定类，指定属性的指定注解，找不到返回null
-	 * 
-	 * @param clazz
-	 * @param fieldName
-	 * @param annotation
-	 * @return T
-	 */
 	public static <T extends Annotation> T findAnnotation(final Class<?> clazz,
 			String fieldName, Class<T> annotation) {
 		try {
