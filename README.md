@@ -23,13 +23,13 @@ based on：
 		<dependency>
 			<groupId>com.github.taniqng</groupId>
 			<artifactId>dis-eventbus-api</artifactId>
-			<version>1.0.1</version>
+			<version>1.0.2</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.github.taniqng</groupId>
 			<artifactId>dis-eventbus-core</artifactId>
-			<version>1.0.1</version>
+			<version>1.0.2</version>
 		</dependency>
 ```
 ## 定义你的事件
