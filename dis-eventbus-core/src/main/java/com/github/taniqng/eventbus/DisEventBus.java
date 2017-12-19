@@ -13,6 +13,7 @@ import org.springframework.util.StringUtils;
 
 import com.github.taniqng.eventbus.api.DisEvent;
 import com.github.taniqng.eventbus.core.Destinations;
+import com.github.taniqng.eventbus.core.JsonUtils;
 import com.github.taniqng.eventbus.core.PropertiesLoaderForBus;
 
 @Component
@@ -45,7 +46,7 @@ public class DisEventBus {
 			ev.setData(event);
 			rabbitTemplate.convertAndSend(Destinations.DEST_TANIQNG_FANOUT_EVENTBUS.getExchange(), 
 					Destinations.DEST_TANIQNG_FANOUT_EVENTBUS.getRoutingKey(),
-	                ev);
+					JsonUtils.writeObject(ev));
 		} catch (Exception e) {
 			logger.error("不能创建事件实例，猜测{}没有提供默认无参构造器.", eventClass.getSimpleName());
 		}
