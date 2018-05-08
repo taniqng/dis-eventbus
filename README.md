@@ -1,5 +1,5 @@
 # dis-eventbus
-Simple distributef event-bus 
+Simple distributed event-bus 
 based on：
 * spring boot
 * rabbitMQ
