@@ -28,7 +28,7 @@ public class EventAspect {
     
     @Autowired DisEventBus bus;
 
-    @Pointcut("@annotation(com.github.taniqng.eventbus.api.SendEvent)")
+    @Pointcut("@annotation(com.github.taniqng.eventbus.SendEvent)")
     public void eventPointcut() {}
     
     @Around("eventPointcut()")

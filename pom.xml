@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>com.github.taniqng</groupId>
 	<artifactId>dis-eventbus</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.6</version>
 	<packaging>pom</packaging>
 	<name>dis-eventbus</name>
 	<url>https://github.com/taniqng/dis-eventbus</url>
@@ -24,7 +24,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	<scm>
+    <scm>
 		<url>https://github.com/taniqng/dis-eventbus</url>
 		<connection>https://github.com/taniqng/dis-eventbus.git</connection>
 		<developerConnection>https://github.com/taniqng</developerConnection>
@@ -42,7 +42,6 @@
 			<id>release</id>
 			<build>
 				<plugins>
-					<!-- Source -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
@@ -56,7 +55,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- Javadoc -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
@@ -74,7 +72,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- GPG -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>

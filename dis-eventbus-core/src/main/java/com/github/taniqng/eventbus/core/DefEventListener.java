@@ -23,7 +23,7 @@ public class DefEventListener implements EventListener {
 		logger.debug("处理来自{}[{}]的消息:eventCode-{}", event.getAppId(),
 				event.getSourceIp(), event.getEventCode());
 		logger.debug("消息内容：{}", event.getData());
-		LocalEventBus.publish(task);
+		LocalEventBus.publish(event);
 	}
 
 }

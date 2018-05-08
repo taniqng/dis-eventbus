@@ -9,9 +9,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListenerConfigurer;
 import org.springframework.amqp.rabbit.config.RabbitListenerConfigUtils;
 import org.springframework.amqp.rabbit.listener.MethodRabbitListenerEndpoint;
@@ -68,8 +65,6 @@ public class EventListenerPostProcessor implements BeanPostProcessor, Ordered, B
             "spring.rabbitmq.emptyStringArguments";
 
     private static final ConversionService CONVERSION_SERVICE = new DefaultConversionService();
-
-    private final Log logger = LogFactory.getLog(this.getClass());
 
     private final Set<String> emptyStringArguments = new HashSet<String>();
 
